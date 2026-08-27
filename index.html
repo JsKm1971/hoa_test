@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Autumn Grove / Stonebrook HOA</title>
 
 <title>Autumn Grove / Stonebrook HOA</title>
-
 
 <style>
 /* =========================================================
@@ -50,7 +48,10 @@ body {
     overflow: hidden;
 }
 
-/* HERO */
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .ags-hero {
     position: relative;
@@ -151,7 +152,10 @@ body {
     transform: translateY(3px);
 }
 
-/* COMMUNITY NAVIGATION */
+
+/* =========================================================
+   COMMUNITY NAVIGATION
+   ========================================================= */
 
 .ags-navigation-section {
     background: var(--cream);
@@ -282,7 +286,10 @@ body {
     letter-spacing: .5px;
 }
 
-/* COMMUNITY AT A GLANCE — COMBINED WITH COMMUNITY */
+
+/* =========================================================
+   COMMUNITY AT A GLANCE
+   ========================================================= */
 
 .ags-community-combined {
     padding-bottom: 0;
@@ -323,6 +330,11 @@ body {
     padding: 0 25px;
 }
 
+
+/* =========================================================
+   INFORMATION BOXES
+   ========================================================= */
+
 .ags-info-box {
     display: flex;
     gap: 20px;
@@ -330,7 +342,9 @@ body {
     background: rgba(255,255,255,.07);
     border: 1px solid rgba(255,255,255,.12);
     border-radius: 6px;
-    transition: background .3s ease;
+    transition:
+        background .3s ease,
+        transform .3s ease;
 }
 
 .ags-info-box:hover {
@@ -373,7 +387,64 @@ body {
     margin: 0;
 }
 
-/* WELCOME */
+
+/* =========================================================
+   CLICKABLE COMMUNITY NEWS BOX
+   Removes WordPress link underlines
+   ========================================================= */
+
+.ags-info-link,
+.ags-info-link:link,
+.ags-info-link:visited,
+.ags-info-link:hover,
+.ags-info-link:active,
+.ags-info-link:focus {
+    display: flex;
+    width: 100%;
+    text-decoration: none !important;
+    -webkit-text-decoration: none !important;
+    color: inherit !important;
+    outline: none !important;
+    cursor: pointer;
+}
+
+/* Force WordPress to remove link decoration from ALL
+   text and elements inside the clickable box */
+
+.ags-info-link *,
+.ags-info-link *:link,
+.ags-info-link *:visited,
+.ags-info-link *:hover,
+.ags-info-link *:active,
+.ags-info-link *:focus {
+    text-decoration: none !important;
+    -webkit-text-decoration: none !important;
+}
+
+/* Preserve correct colors inside clickable box */
+
+.ags-info-link small {
+    color: var(--copper) !important;
+}
+
+.ags-info-link h3 {
+    color: var(--white) !important;
+}
+
+.ags-info-link p {
+    color: rgba(255,255,255,.68) !important;
+}
+
+/* Optional visual feedback when box is hovered */
+
+.ags-info-link:hover {
+    background: rgba(255,255,255,.12);
+}
+
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
 
 .ags-welcome {
     padding: 100px 25px;
@@ -413,9 +484,13 @@ body {
     color: var(--white) !important;
 }
 
-/* RESPONSIVE */
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 1000px) {
+
     .ags-card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -425,7 +500,9 @@ body {
     }
 }
 
+
 @media (max-width: 600px) {
+
     .ags-hero {
         min-height: 570px;
     }
@@ -453,10 +530,10 @@ body {
     }
 
     .ags-navigation-section {
-    background: var(--cream);
-    padding: 90px 0;
-    width: 100%;
-}
+        background: var(--cream);
+        padding: 90px 0;
+        width: 100%;
+    }
 
     .ags-section-heading h2,
     .ags-glance-heading h2,
@@ -474,12 +551,12 @@ body {
     }
 
     .ags-combined-glance {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 65px 0 75px;
-    background: #496052;
-    border-radius: 10px;
-}
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 65px 0 75px;
+        background: #496052;
+        border-radius: 10px;
+    }
 
     .ags-glance-heading {
         padding: 0 18px;
@@ -492,71 +569,78 @@ body {
     .ags-info-box {
         padding: 24px;
     }
-.ags-info-link {
-    display: flex;
-    width: 100%;
-    text-decoration: none !important;
-    color: inherit !important;
-    border: 1px solid rgba(255,255,255,.12) !important;
-    outline: none !important;
-    box-shadow: none !important;
-    cursor: pointer;
-}
 
-.ags-info-link:hover,
-.ags-info-link:focus,
-.ags-info-link:active,
-.ags-info-link:visited {
-    text-decoration: none !important;
-    color: inherit !important;
-    outline: none !important;
-}
     .ags-welcome {
         padding: 70px 20px;
     }
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="ags-community-page">
 
-        <section class="ags-hero">
-            <div class="ags-hero-overlay"></div>
 
-            <div class="ags-hero-content">
-                <div class="ags-eyebrow">AUTUMN GROVE / STONEBROOK</div>
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
 
-                <h1>Welcome Home</h1>
+    <section class="ags-hero">
 
-                <div class="ags-accent-line"></div>
+        <div class="ags-hero-overlay"></div>
 
-                <p class="ags-hero-subtitle">
-                    Your neighborhood. Your community. Your home.
-                </p>
+        <div class="ags-hero-content">
 
-                <p class="ags-hero-description">
-                    Welcome to the Autumn Grove / Stonebrook HOA community portal.
-                    Stay connected, informed, and engaged with everything happening
-                    in our neighborhood.
-                </p>
-
-                <a href="#ags-community" class="ags-hero-button">
-                    Explore Our Community <span>↓</span>
-                </a>
+            <div class="ags-eyebrow">
+                AUTUMN GROVE / STONEBROOK
             </div>
-        </section>
+
+            <h1>Welcome Home</h1>
+
+            <div class="ags-accent-line"></div>
+
+            <p class="ags-hero-subtitle">
+                Your neighborhood. Your community. Your home.
+            </p>
+
+            <p class="ags-hero-description">
+                Welcome to the Autumn Grove / Stonebrook HOA community portal.
+                Stay connected, informed, and engaged with everything happening
+                in our neighborhood.
+            </p>
+
+            <a href="#ags-community" class="ags-hero-button">
+                Explore Our Community <span>↓</span>
+            </a>
+
+        </div>
+
+    </section>
 
 
+    <!-- =====================================================
+         COMMUNITY
+         ===================================================== -->
+
+    <section
+        id="ags-community"
+        class="ags-navigation-section ags-community-combined"
+    >
+
+        <div class="ags-combined-glance">
 
 
-        <section id="ags-community" class="ags-navigation-section ags-community-combined">
-            <div class="ags-combined-glance">
+            <!-- COMMUNITY HEADING -->
 
-                <div class="ags-glance-heading">
-                    <span>STAY CONNECTED</span>             
-               <h2>More Than a Neighborhood</h2>
+            <div class="ags-glance-heading">
+
+                <span>STAY CONNECTED</span>
+
+                <h2>More Than a Neighborhood</h2>
+
                 <p>
                     Autumn Grove and Stonebrook are more than streets and homes.
                     They are places where neighbors connect, families grow,
@@ -567,61 +651,102 @@ body {
                     Our HOA is here to help maintain a welcoming, informed,
                     and thriving community for everyone who calls Autumn Grove
                     and Stonebrook home.
-                </p>            
-                </div>
+                </p>
 
-                <div class="ags-glance-grid">
-
-
-                   
-                    <a href="https://YOUR-OLD-WORDPRESS-SITE-URL.com"
-   class="ags-info-box ags-info-link"
-   target="_blank"
-   rel="noopener noreferrer">
-
-    <div class="ags-info-icon">📣</div>
-
-    <div>
-        <small>LATEST</small>
-        <h3>Community News</h3>
-        <p>
-            Stay up to date with the latest HOA information.
-        </p>
-    </div>
-
-</a>
-
-
-                   
-                    <div class="ags-info-box">
-                        <div class="ags-info-icon">🗓</div>
-                        <div>
-                            <small>UPCOMING</small>
-                            <h3>HOA Meetings</h3>
-                            <p>
-                                Check the calendar for upcoming meetings and events.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="ags-info-box">
-                        <div class="ags-info-icon">📄</div>
-                        <div>
-                            <small>IMPORTANT</small>
-                            <h3>HOA Documents</h3>
-                            <p>
-                                Quickly access important community documents.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
             </div>
-        </section>
 
 
-       
+            <!-- INFORMATION BOXES -->
 
-    </div>
+            <div class="ags-glance-grid">
+
+
+                <!-- ==========================================
+                     CLICKABLE COMMUNITY NEWS BOX
+                     Replace the URL below with your real URL
+                     ========================================== -->
+
+                <a
+                    href="https://YOUR-OLD-WORDPRESS-SITE-URL.com"
+                    class="ags-info-box ags-info-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View the latest Community News"
+                >
+
+                    <div class="ags-info-icon">
+                        📣
+                    </div>
+
+                    <div>
+
+                        <small>LATEST</small>
+
+                        <h3>Community News</h3>
+
+                        <p>
+                            Stay up to date with the latest HOA information.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- HOA MEETINGS -->
+
+                <div class="ags-info-box">
+
+                    <div class="ags-info-icon">
+                        🗓
+                    </div>
+
+                    <div>
+
+                        <small>UPCOMING</small>
+
+                        <h3>HOA Meetings</h3>
+
+                        <p>
+                            Check the calendar for upcoming meetings and events.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HOA DOCUMENTS -->
+
+                <div class="ags-info-box">
+
+                    <div class="ags-info-icon">
+                        📄
+                    </div>
+
+                    <div>
+
+                        <small>IMPORTANT</small>
+
+                        <h3>HOA Documents</h3>
+
+                        <p>
+                            Quickly access important community documents.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
 </body>
 </html>
