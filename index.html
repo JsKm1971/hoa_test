@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Autumn Grove / Stonebrook HOA</title>
 
+<title>Autumn Grove / Stonebrook HOA</title>
+
+
 <style>
 /* =========================================================
    AUTUMN GROVE / STONEBROOK HOA
@@ -279,11 +282,18 @@ body {
     letter-spacing: .5px;
 }
 
-/* COMMUNITY AT A GLANCE */
+/* COMMUNITY AT A GLANCE — COMBINED WITH COMMUNITY */
 
-.ags-glance {
+.ags-community-combined {
+    padding-bottom: 0;
+}
+
+.ags-combined-glance {
+    max-width: 1200px;
+    margin: 70px auto 0;
+    padding: 65px 0 75px;
     background: #496052;
-    padding: 85px 25px;
+    border-radius: 10px;
 }
 
 .ags-glance-inner {
@@ -294,7 +304,8 @@ body {
 .ags-glance-heading {
     text-align: center;
     max-width: 750px;
-    margin: 0 auto 50px;
+    margin: 0 auto 40px;
+    padding: 0 25px;
 }
 
 .ags-glance-heading h2 {
@@ -309,6 +320,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
+    padding: 0 25px;
 }
 
 .ags-info-box {
@@ -441,8 +453,10 @@ body {
     }
 
     .ags-navigation-section {
-        padding: 65px 18px;
-    }
+    background: var(--cream);
+    padding: 90px 0;
+    width: 100%;
+}
 
     .ags-section-heading h2,
     .ags-glance-heading h2,
@@ -459,8 +473,20 @@ body {
         padding: 28px 24px;
     }
 
-    .ags-glance {
-        padding: 65px 18px;
+    .ags-combined-glance {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 65px 0 75px;
+    background: #496052;
+    border-radius: 10px;
+}
+
+    .ags-glance-heading {
+        padding: 0 18px;
+    }
+
+    .ags-glance-grid {
+        padding: 0 18px;
     }
 
     .ags-info-box {
@@ -478,219 +504,96 @@ body {
 
 <div class="ags-community-page">
 
-    <section class="ags-hero">
-        <div class="ags-hero-overlay"></div>
+        <section class="ags-hero">
+            <div class="ags-hero-overlay"></div>
 
-        <div class="ags-hero-content">
-            <div class="ags-eyebrow">AUTUMN GROVE / STONEBROOK</div>
+            <div class="ags-hero-content">
+                <div class="ags-eyebrow">AUTUMN GROVE / STONEBROOK</div>
 
-            <h1>Welcome Home</h1>
+                <h1>Welcome Home</h1>
 
-            <div class="ags-accent-line"></div>
+                <div class="ags-accent-line"></div>
 
-            <p class="ags-hero-subtitle">
-                Your neighborhood. Your community. Your home.
-            </p>
+                <p class="ags-hero-subtitle">
+                    Your neighborhood. Your community. Your home.
+                </p>
 
-            <p class="ags-hero-description">
-                Welcome to the Autumn Grove / Stonebrook HOA community portal.
-                Stay connected, informed, and engaged with everything happening
-                in our neighborhood.
-            </p>
+                <p class="ags-hero-description">
+                    Welcome to the Autumn Grove / Stonebrook HOA community portal.
+                    Stay connected, informed, and engaged with everything happening
+                    in our neighborhood.
+                </p>
 
-            <a href="#ags-community" class="ags-hero-button">
-                Explore Our Community <span>↓</span>
-            </a>
-        </div>
-    </section>
-
-
-    <section id="ags-community" class="ags-navigation-section">
-
-        <div class="ags-section-heading">
-            <span>EXPLORE</span>
-
-            <h2>Your Community</h2>
-
-            <p>
-                Everything you need to stay connected with Autumn Grove
-                and Stonebrook, all in one place.
-            </p>
-        </div>
+                <a href="#ags-community" class="ags-hero-button">
+                    Explore Our Community <span>↓</span>
+                </a>
+            </div>
+        </section>
 
 
-        <div class="ags-card-grid">
-
-            <a href="#" class="ags-community-card">
-                <div class="ags-card-icon">🏡</div>
-
-                <div class="ags-card-content">
-                    <h3>Our Community</h3>
-
-                    <p>
-                        Learn more about Autumn Grove, Stonebrook,
-                        our neighborhood, and the HOA.
-                    </p>
-
-                    <span class="ags-card-link">
-                        Learn More →
-                    </span>
-                </div>
-            </a>
 
 
-            <a href="#" class="ags-community-card">
-                <div class="ags-card-icon">📢</div>
+        <section id="ags-community" class="ags-navigation-section ags-community-combined">
+            <div class="ags-combined-glance">
 
-                <div class="ags-card-content">
-                    <h3>What's New</h3>
-
-                    <p>
-                        Stay informed about HOA announcements,
-                        neighborhood news, and important updates.
-                    </p>
-
-                    <span class="ags-card-link">
-                        View Updates →
-                    </span>
-                </div>
-            </a>
-
-
-            <a href="#" class="ags-community-card">
-                <div class="ags-card-icon">📅</div>
-
-                <div class="ags-card-content">
-                    <h3>Events</h3>
-
-                    <p>
-                        Discover upcoming neighborhood gatherings,
-                        meetings, activities, and community events.
-                    </p>
-
-                    <span class="ags-card-link">
-                        View Events →
-                    </span>
-                </div>
-            </a>
-
-
-            <a href="#" class="ags-community-card">
-                <div class="ags-card-icon">📚</div>
-
-                <div class="ags-card-content">
-                    <h3>Resident Resources</h3>
-
-                    <p>
-                        Access important documents, forms, guidelines,
-                        policies, and other homeowner resources.
-                    </p>
-
-                    <span class="ags-card-link">
-                        View Resources →
-                    </span>
-                </div>
-            </a>
-
-        </div>
-    </section>
-
-
-    <section class="ags-glance">
-
-        <div class="ags-glance-inner">
-
-            <div class="ags-glance-heading">
-                <span>STAY CONNECTED</span>
-
-                <h2>Community at a Glance</h2>
+                <div class="ags-glance-heading">
+                    <span>STAY CONNECTED</span>             
+               <h2>More Than a Neighborhood</h2>
+                <p>
+                    Autumn Grove and Stonebrook are more than streets and homes.
+                    They are places where neighbors connect, families grow,
+                    and community matters.
+                </p>
 
                 <p>
-                    A quick look at what's happening around the neighborhood.
-                </p>
+                    Our HOA is here to help maintain a welcoming, informed,
+                    and thriving community for everyone who calls Autumn Grove
+                    and Stonebrook home.
+                </p>            
+                </div>
+
+                <div class="ags-glance-grid">
+
+                    <div class="ags-info-box">
+                        <div class="ags-info-icon">📣</div>
+                        <div>
+                            <small>LATEST</small>
+                            <h3>Community News</h3>
+                            <p>
+                                Stay up to date with the latest HOA information.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ags-info-box">
+                        <div class="ags-info-icon">🗓</div>
+                        <div>
+                            <small>UPCOMING</small>
+                            <h3>HOA Meetings</h3>
+                            <p>
+                                Check the calendar for upcoming meetings and events.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ags-info-box">
+                        <div class="ags-info-icon">📄</div>
+                        <div>
+                            <small>IMPORTANT</small>
+                            <h3>HOA Documents</h3>
+                            <p>
+                                Quickly access important community documents.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
 
-            <div class="ags-glance-grid">
+       
 
-                <div class="ags-info-box">
-                    <div class="ags-info-icon">📣</div>
-
-                    <div>
-                        <small>LATEST</small>
-
-                        <h3>Community News</h3>
-
-                        <p>
-                            Stay up to date with the latest HOA information.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="ags-info-box">
-                    <div class="ags-info-icon">🗓</div>
-
-                    <div>
-                        <small>UPCOMING</small>
-
-                        <h3>HOA Meetings</h3>
-
-                        <p>
-                            Check the calendar for upcoming meetings and events.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="ags-info-box">
-                    <div class="ags-info-icon">📄</div>
-
-                    <div>
-                        <small>IMPORTANT</small>
-
-                        <h3>HOA Documents</h3>
-
-                        <p>
-                            Quickly access important community documents.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="ags-welcome">
-
-        <div class="ags-welcome-content">
-
-            <span>OUR COMMUNITY</span>
-
-            <h2>More Than a Neighborhood</h2>
-
-            <p>
-                Autumn Grove and Stonebrook are more than streets and homes.
-                They are places where neighbors connect, families grow,
-                and community matters.
-            </p>
-
-            <p>
-                Our HOA is here to help maintain a welcoming, informed,
-                and thriving community for everyone who calls Autumn Grove
-                and Stonebrook home.
-            </p>
-
-            <a href="#" class="ags-outline-button">
-                Learn About the HOA →
-            </a>
-
-        </div>
-
-    </section>
-
-</div>
-
+    </div>
 </body>
 </html>
