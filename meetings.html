@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -489,7 +491,7 @@ a {
 
 
 /* =========================================================
-   MEETING DOCUMENTS
+   RESOURCES
    ========================================================= */
 
 .ags-resources {
@@ -510,18 +512,21 @@ a {
 
 .ags-resource-card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
-    padding: 27px;
+    padding: 30px 27px;
     background: var(--white);
-    border: 1px solid var(--border);
+    border: 2px solid var(--border);
     border-radius: 8px;
-    text-decoration: none !important;
-    transition: transform .3s ease, box-shadow .3s ease;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
 }
 
 .ags-resource-card:hover {
     transform: translateY(-4px);
+    border-color: var(--amber);
     box-shadow: 0 12px 30px rgba(38,61,50,.10);
 }
 
@@ -538,22 +543,53 @@ a {
     font-size: 22px;
 }
 
-.ags-resource-card small {
-    display: block;
-    margin-bottom: 4px;
-    color: var(--copper);
-    font-family: "Montserrat", sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+.ags-resource-content {
+    flex: 1;
+    min-width: 0;
 }
 
-.ags-resource-card h3 {
-    margin: 0;
+.ags-resource-content h3 {
+    margin: 0 0 16px;
     color: var(--forest);
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
+}
+
+
+/* RESOURCE UL LISTS */
+
+.ags-resource-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.ags-resource-list li {
+    margin-bottom: 10px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.ags-resource-list li:last-child {
+    margin-bottom: 0;
+}
+
+.ags-resource-list a {
+    color: var(--forest);
+    text-decoration: underline;
+    text-decoration-color: var(--copper);
+    text-underline-offset: 3px;
+    transition: color .2s ease;
+}
+
+.ags-resource-list a:hover {
+    color: var(--copper);
+}
+
+.ags-resource-list a:focus {
+    outline: 2px solid var(--copper);
+    outline-offset: 3px;
 }
 
 
@@ -746,6 +782,10 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .ags-resource-card {
+        padding: 25px 22px;
+    }
+
     .ags-participation-inner {
         padding: 35px 25px;
     }
@@ -757,6 +797,7 @@ a {
 }
 
 </style>
+
 </head>
 
 
@@ -778,6 +819,7 @@ a {
             </a>
 
             <!-- Replace index.html with your actual Home page URL -->
+
             <a href="index.html" class="ags-home-tab">
                 <span>⌂</span>
                 Return Home
@@ -796,7 +838,6 @@ a {
 
         <div class="ags-intro-inner ags-reveal">
 
-         
             <span>YOUR COMMUNITY/HOA Meetings</span>
 
             <h2>Your Participation Matters</h2>
@@ -854,31 +895,52 @@ a {
 
                     <small>UPCOMING MEETING</small>
 
-                    <h2>Autumn Grove / Stonebrook HOA Meeting</h2>
+                    <h2>
+                        Autumn Grove / Stonebrook HOA Meeting
+                    </h2>
+
 
                     <div class="ags-detail-row">
-                        <div class="ags-detail-icon">🕒</div>
+
+                        <div class="ags-detail-icon">
+                            🕒
+                        </div>
+
                         <div>
                             <strong>Time:</strong><br>
                             6:30 PM
                         </div>
+
                     </div>
 
+
                     <div class="ags-detail-row">
-                        <div class="ags-detail-icon">📍</div>
+
+                        <div class="ags-detail-icon">
+                            📍
+                        </div>
+
                         <div>
                             <strong>Location:</strong><br>
                             Meeting location to be announced
                         </div>
+
                     </div>
 
+
                     <div class="ags-detail-row">
-                        <div class="ags-detail-icon">🏡</div>
+
+                        <div class="ags-detail-icon">
+                            🏡
+                        </div>
+
                         <div>
                             <strong>Who May Attend:</strong><br>
                             Autumn Grove and Stonebrook homeowners
                         </div>
+
                     </div>
+
 
                     <p class="ags-meeting-note">
                         Meeting dates, times, and locations are subject to
@@ -890,12 +952,14 @@ a {
 
             </section>
 
+        </div>
 
-    
+    </main>
+
 
     <!-- =====================================================
-         MEETING DOCUMENTS
-         Replace # with actual links when documents are available
+         RESOURCES
+         Replace # with actual document URLs
          ===================================================== -->
 
     <section class="ags-resources">
@@ -903,56 +967,176 @@ a {
         <div class="ags-resources-inner">
 
 
+            <!-- RESOURCE HEADING -->
+
             <div class="ags-section-title ags-reveal">
 
                 <span class="ags-section-label">
-                    MEETING RESOURCES
+                    RESOURCES
                 </span>
 
-                <h2>Documents & Information</h2>
+                <h2>
+                    Documents &amp; Information
+                </h2>
 
                 <p>
-                    Access information associated with upcoming and previous
-                    HOA meetings.
+                    Access HOA meeting agendas, meeting minutes,
+                    and important community documents.
                 </p>
 
             </div>
 
 
+            <!-- RESOURCE BOXES -->
+
             <div class="ags-resource-grid">
 
 
-                <!-- Replace # with your Agenda URL -->
-                <a href="#" class="ags-resource-card ags-reveal">
+                <!-- =============================================
+                     BOX 1
+                     MEETING AGENDAS
+                     ============================================= -->
+
+                <div class="ags-resource-card ags-reveal">
 
                     <div class="ags-resource-icon">
                         📋
                     </div>
 
-                    <div>
-                        <small>DOCUMENT</small>
-                        <h3>Current Meeting Agenda</h3>
+                    <div class="ags-resource-content">
+
+                        <h3>
+                            Meeting Agendas
+                        </h3>
+
+                        <ul class="ags-resource-list">
+
+                            <!--
+                            Replace # with the actual document URL.
+                            You can duplicate an entire LI element
+                            whenever you need another document.
+                            -->
+
+                            <li>
+                                <a href="#">
+                                    September 2026 Meeting Agenda
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    August 2026 Meeting Agenda
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    July 2026 Meeting Agenda
+                                </a>
+                            </li>
+
+                        </ul>
+
                     </div>
 
-                </a>
+                </div>
 
 
-                <!-- Replace # with your Minutes URL -->
-                <a href="#" class="ags-resource-card ags-reveal">
+                <!-- =============================================
+                     BOX 2
+                     MEETING MINUTES
+                     ============================================= -->
+
+                <div class="ags-resource-card ags-reveal">
 
                     <div class="ags-resource-icon">
                         📄
                     </div>
 
-                    <div>
-                        <small>ARCHIVE</small>
-                        <h3>Meeting Minutes</h3>
+                    <div class="ags-resource-content">
+
+                        <h3>
+                            Meeting Minutes
+                        </h3>
+
+                        <ul class="ags-resource-list">
+
+                            <!--
+                            Replace # with the actual document URL.
+                            -->
+
+                            <li>
+                                <a href="#">
+                                    August 2026 Meeting Minutes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    July 2026 Meeting Minutes
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    June 2026 Meeting Minutes
+                                </a>
+                            </li>
+
+                        </ul>
+
                     </div>
 
-                </a>
+                </div>
 
 
-               
+                <!-- =============================================
+                     BOX 3
+                     HOA DOCUMENTS
+                     ============================================= -->
+
+                <div class="ags-resource-card ags-reveal">
+
+                    <div class="ags-resource-icon">
+                        📁
+                    </div>
+
+                    <div class="ags-resource-content">
+
+                        <h3>
+                            HOA Documents
+                        </h3>
+
+                        <ul class="ags-resource-list">
+
+                            <!--
+                            Replace # with the actual document URL.
+                            -->
+
+                            <li>
+                                <a href="#">
+                                    HOA Covenants
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    HOA Bylaws
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Community Guidelines
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
@@ -960,8 +1144,6 @@ a {
 
     </section>
 
-
-   
 
     <!-- =====================================================
          FOOTER
@@ -975,9 +1157,11 @@ a {
         </p>
 
         <!-- Replace index.html with your actual Home page URL -->
+
         <a href="index.html" class="ags-footer-home">
 
             <span>⌂</span>
+
             Return to Home
 
         </a>
@@ -1002,11 +1186,14 @@ document.addEventListener("DOMContentLoaded", function () {
        CURRENT YEAR
        ----------------------------------------------------- */
 
-    const yearElement = document.getElementById("ags-year");
+    const yearElement =
+        document.getElementById("ags-year");
 
     if (yearElement) {
+
         yearElement.textContent =
             " • " + new Date().getFullYear();
+
     }
 
 
@@ -1023,10 +1210,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!("IntersectionObserver" in window)) {
 
         revealElements.forEach(function (element) {
+
             element.classList.add("is-visible");
+
         });
 
         return;
+
     }
 
 
@@ -1072,4 +1262,5 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 </body>
+
 </html>
