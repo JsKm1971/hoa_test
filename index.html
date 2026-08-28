@@ -337,18 +337,32 @@ body {
 
 .ags-info-box {
     display: flex;
-    gap: 20px;
-    padding: 30px;
-    background: rgba(255,255,255,.07);
-    border: 1px solid rgba(255,255,255,.12);
-    border-radius: 6px;
+    align-items: center;
+    gap: 22px;
+
+    width: 100%;
+    min-height: 145px;
+    padding: 32px;
+
+    background: rgba(255,255,255,.10);
+
+    /* THICKER BRIGHT AUTUMN BORDER */
+    border: 3px solid #E69A45;
+
+    border-radius: 8px;
+
     transition:
         background .3s ease,
-        transform .3s ease;
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
 }
 
 .ags-info-box:hover {
-    background: rgba(255,255,255,.12);
+    background: rgba(255,255,255,.16);
+    border-color: #F2B66D;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.12);
 }
 
 .ags-info-icon {
