@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Community | Autumn Grove / Stonebrook HOA</title>
+<title>Our Community | Autumn Grove / Stonebridge HOA</title>
 
 <style>
+
 /* =========================================================
-   AUTUMN GROVE / STONEBROOK HOA
+   AUTUMN GROVE / STONEBRIDGE HOA
    OUR COMMUNITY PAGE
    HTML + CSS + JS
    ========================================================= */
@@ -39,7 +37,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     color: var(--text);
     background: var(--white);
 }
@@ -48,18 +46,20 @@ a {
     color: inherit;
 }
 
-/* =========================
+
+/* =========================================================
    PAGE WRAPPER
-   ========================= */
+   ========================================================= */
 
 .ags-community-page {
     width: 100%;
     overflow: hidden;
 }
 
-/* =========================
+
+/* =========================================================
    TOP NAVIGATION
-   ========================= */
+   ========================================================= */
 
 .ags-top-nav {
     width: 100%;
@@ -72,6 +72,7 @@ a {
     margin: 0 auto;
     min-height: 70px;
     padding: 0 25px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,15 +91,21 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 9px;
+
     padding: 12px 20px;
+
     background: var(--copper);
     color: var(--white) !important;
+
     text-decoration: none !important;
+
     border-radius: 4px;
+
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: .5px;
+
     transition: all .3s ease;
 }
 
@@ -107,14 +114,20 @@ a {
     transform: translateY(-2px);
 }
 
+.ags-home-tab:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
+}
+
 .ags-home-tab span {
     font-size: 17px;
     line-height: 1;
 }
 
-/* =========================
+
+/* =========================================================
    PAGE INTRO
-   ========================= */
+   ========================================================= */
 
 .ags-page-intro {
     background: var(--cream);
@@ -130,9 +143,12 @@ a {
 
 .ags-eyebrow {
     display: block;
+
     margin-bottom: 14px;
+
     font-family: "Montserrat", sans-serif;
     color: var(--copper);
+
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -140,8 +156,10 @@ a {
 
 .ags-page-intro h1 {
     margin: 0 0 20px;
+
     font-family: "Montserrat", sans-serif;
     color: var(--forest);
+
     font-size: clamp(42px, 6vw, 64px);
     line-height: 1.08;
     font-weight: 600;
@@ -151,21 +169,27 @@ a {
 .ags-accent-line {
     width: 65px;
     height: 4px;
+
     margin: 0 auto 25px;
+
     background: var(--copper);
 }
 
 .ags-page-intro p {
     max-width: 700px;
+
     margin: 0 auto;
+
     color: var(--muted);
+
     font-size: 17px;
     line-height: 1.8;
 }
 
-/* =========================
+
+/* =========================================================
    MAIN CONTENT
-   ========================= */
+   ========================================================= */
 
 .ags-content {
     padding: 85px 25px;
@@ -177,23 +201,30 @@ a {
     margin: 0 auto;
 }
 
-/* =========================
+
+/* =========================================================
    WELCOME PANEL
-   ========================= */
+   ========================================================= */
 
 .ags-welcome-panel {
     display: grid;
     grid-template-columns: 1.15fr .85fr;
     gap: 55px;
+
     align-items: center;
-    margin-bottom: 75px;
+
+    margin-bottom: 60px;
 }
 
 .ags-content-label {
     display: block;
+
     margin-bottom: 12px;
+
     color: var(--copper);
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2.5px;
@@ -201,8 +232,11 @@ a {
 
 .ags-welcome-copy h2 {
     margin: 0 0 20px;
+
     color: var(--forest);
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 36px;
     line-height: 1.2;
     font-weight: 600;
@@ -210,35 +244,176 @@ a {
 
 .ags-welcome-copy p {
     margin: 0 0 18px;
+
     color: var(--muted);
+
     font-size: 16px;
     line-height: 1.8;
 }
 
 .ags-highlight-box {
     padding: 35px;
+
     background: var(--forest);
+
     border-radius: 8px;
+
     box-shadow: 0 15px 35px rgba(38,61,50,.12);
 }
 
 .ags-highlight-box h3 {
     margin: 0 0 12px;
+
     color: var(--white);
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 21px;
 }
 
 .ags-highlight-box p {
     margin: 0;
-    color: rgba(255,255,255,.72);
+
+    color: rgba(255,255,255,.82);
+
     font-size: 14px;
     line-height: 1.7;
 }
 
-/* =========================
+
+/* =========================================================
+   IMPORTANT EVENTS
+   ========================================================= */
+
+.ags-events-box {
+    width: 100%;
+
+    margin: 0 0 75px;
+
+    padding: 40px;
+
+    background: var(--cream);
+
+    border: 2px solid var(--border);
+    border-top: 6px solid var(--copper);
+
+    border-radius: 10px;
+
+    box-shadow: 0 12px 30px rgba(38,61,50,.08);
+}
+
+.ags-events-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.ags-events-header span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--copper);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.ags-events-header h2 {
+    margin: 0 0 10px;
+
+    color: var(--forest);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.ags-events-header p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EVENT CARDS
+   ========================================================= */
+
+.ags-events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.ags-event-card {
+    padding: 28px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.ags-event-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--copper);
+
+    box-shadow: 0 10px 25px rgba(38,61,50,.10);
+}
+
+.ags-event-card h3 {
+    margin: 0 0 18px;
+
+    padding-bottom: 12px;
+
+    color: var(--forest);
+
+    border-bottom: 2px solid var(--soft-green);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.ags-event-detail {
+    margin-bottom: 12px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.ags-event-detail:last-child {
+    margin-bottom: 0;
+}
+
+.ags-event-detail strong {
+    color: var(--forest);
+    font-weight: 600;
+}
+
+
+/* =========================================================
    COMMUNITY CARDS
-   ========================= */
+   ========================================================= */
 
 .ags-section-title {
     max-width: 760px;
@@ -248,15 +423,20 @@ a {
 
 .ags-section-title h2 {
     margin: 0 0 14px;
+
     color: var(--forest);
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 34px;
     font-weight: 600;
 }
 
 .ags-section-title p {
     margin: 0;
+
     color: var(--muted);
+
     font-size: 16px;
     line-height: 1.7;
 }
@@ -270,30 +450,46 @@ a {
 
 .ags-community-card {
     position: relative;
+
     padding: 32px 28px;
+
     background: var(--white);
+
     border: 1px solid var(--border);
     border-radius: 8px;
+
     overflow: hidden;
-    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
 }
 
 .ags-community-card::before {
     content: "";
+
     position: absolute;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 4px;
+
     background: var(--copper);
+
     transform: scaleX(0);
     transform-origin: left;
+
     transition: transform .3s ease;
 }
 
 .ags-community-card:hover {
     transform: translateY(-7px);
+
     border-color: transparent;
+
     box-shadow: 0 18px 40px rgba(38,61,50,.12);
 }
 
@@ -304,33 +500,44 @@ a {
 .ags-card-icon {
     width: 56px;
     height: 56px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     margin-bottom: 22px;
+
     background: var(--soft-green);
+
     border-radius: 50%;
+
     font-size: 25px;
 }
 
 .ags-community-card h3 {
     margin: 0 0 10px;
+
     color: var(--forest);
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 19px;
     font-weight: 600;
 }
 
 .ags-community-card p {
     margin: 0;
+
     color: var(--muted);
+
     font-size: 14px;
     line-height: 1.7;
 }
 
-/* =========================
+
+/* =========================================================
    COMMUNITY VALUES
-   ========================= */
+   ========================================================= */
 
 .ags-values {
     padding: 75px 25px;
@@ -350,9 +557,13 @@ a {
 
 .ags-values-title span {
     display: block;
+
     margin-bottom: 12px;
+
     color: var(--copper);
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2.5px;
@@ -360,15 +571,20 @@ a {
 
 .ags-values-title h2 {
     margin: 0 0 14px;
+
     color: var(--white);
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 34px;
     font-weight: 600;
 }
 
 .ags-values-title p {
     margin: 0;
-    color: rgba(255,255,255,.70);
+
+    color: rgba(255,255,255,.80);
+
     font-size: 15px;
     line-height: 1.7;
 }
@@ -381,10 +597,15 @@ a {
 
 .ags-value {
     padding: 30px;
+
     background: rgba(255,255,255,.07);
+
     border: 1px solid rgba(255,255,255,.12);
     border-radius: 7px;
-    transition: background .3s ease, transform .3s ease;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
 }
 
 .ags-value:hover {
@@ -399,31 +620,41 @@ a {
 
 .ags-value h3 {
     margin: 0 0 9px;
+
     color: var(--white);
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 18px;
 }
 
 .ags-value p {
     margin: 0;
-    color: rgba(255,255,255,.68);
+
+    color: rgba(255,255,255,.80);
+
     font-size: 13px;
     line-height: 1.65;
 }
 
-/* =========================
-   FOOTER / RETURN HOME
-   ========================= */
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .ags-footer {
     padding: 55px 25px;
+
     background: var(--forest-dark);
+
     text-align: center;
 }
 
 .ags-footer p {
     margin: 0 0 22px;
-    color: rgba(255,255,255,.65);
+
+    color: rgba(255,255,255,.78);
+
     font-size: 13px;
 }
 
@@ -431,14 +662,21 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 9px;
+
     padding: 12px 20px;
-    border: 1px solid rgba(255,255,255,.25);
+
+    border: 1px solid rgba(255,255,255,.40);
     border-radius: 4px;
+
     color: var(--white) !important;
+
     text-decoration: none !important;
+
     font-family: "Montserrat", sans-serif;
+
     font-size: 12px;
     font-weight: 600;
+
     transition: all .3s ease;
 }
 
@@ -447,14 +685,23 @@ a {
     color: var(--forest-dark) !important;
 }
 
-/* =========================
+.ags-footer-home:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
    SCROLL ANIMATION
-   ========================= */
+   ========================================================= */
 
 .ags-reveal {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity .6s ease, transform .6s ease;
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
 }
 
 .ags-reveal.is-visible {
@@ -462,23 +709,57 @@ a {
     transform: translateY(0);
 }
 
-/* =========================
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .ags-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .ags-home-tab,
+    .ags-event-card,
+    .ags-community-card,
+    .ags-value,
+    .ags-footer-home {
+        transition: none;
+    }
+
+}
+
+
+/* =========================================================
    RESPONSIVE
-   ========================= */
+   ========================================================= */
 
 @media (max-width: 900px) {
+
     .ags-welcome-panel {
         grid-template-columns: 1fr;
         gap: 35px;
     }
 
+    .ags-events-grid,
     .ags-community-grid,
     .ags-values-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
+
 }
 
+
 @media (max-width: 600px) {
+
     .ags-nav-inner {
         min-height: 62px;
         padding: 0 18px;
@@ -516,6 +797,15 @@ a {
         font-size: 29px;
     }
 
+    .ags-events-box {
+        padding: 28px 20px;
+    }
+
+    .ags-events-header h2 {
+        font-size: 27px;
+    }
+
+    .ags-events-grid,
     .ags-community-grid,
     .ags-values-grid {
         grid-template-columns: 1fr;
@@ -529,154 +819,460 @@ a {
     .ags-footer {
         padding: 45px 18px;
     }
-}
-</style>
-</head>
 
-<body>
+}
+
+</style>
+
+
+<!-- =========================================================
+     PAGE
+     ========================================================= -->
 
 <div class="ags-community-page">
 
-    <!-- TOP NAVIGATION -->
-    <nav class="ags-top-nav">
+
+    <!-- =====================================================
+         TOP NAVIGATION
+         ===================================================== -->
+
+    <nav class="ags-top-nav" aria-label="Community navigation">
+
         <div class="ags-nav-inner">
+
             <a href="index.html" class="ags-brand">
-                AUTUMN GROVE / STONEBROOK
+                AUTUMN GROVE / STONEBRIDGE
             </a>
 
-            <!-- Change index.html if your Home page uses a different URL -->
-            <a href="index.html" class="ags-home-tab">
-                <span>⌂</span>
+            <a
+                href="https://autumngrovestonebridgehoa.com/?page_id=394&amp;preview=true"
+                class="ags-home-tab">
+
+                <span aria-hidden="true">⌂</span>
+
                 Return Home
+
             </a>
+
         </div>
+
     </nav>
 
 
 
+    <!-- =====================================================
+         PAGE INTRO
+         ===================================================== -->
 
-   
-    <!-- PAGE INTRO -->
     <header class="ags-page-intro">
+
         <div class="ags-intro-inner ags-reveal">
-            <span class="ags-eyebrow">OUR COMMUNITY</span>
 
-            <h1>More Than a Neighborhood</h1>
+            <span class="ags-eyebrow">
+                OUR COMMUNITY
+            </span>
 
-            <div class="ags-accent-line"></div>
+            <h1>
+                More Than a Neighborhood
+            </h1>
+
+            <div
+                class="ags-accent-line"
+                aria-hidden="true">
+            </div>
 
             <p>
-                Autumn Grove and Stonebrook are more than streets and homes.
-                They are places where neighbors connect, families grow,
-                and community matters.
+                Autumn Grove and Stonebridge are more than
+                streets and homes. They are places where
+                neighbors connect, families grow, and
+                community matters.
             </p>
+
         </div>
+
     </header>
 
 
 
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
 
-   
-    <!-- MAIN CONTENT -->
     <main class="ags-content">
+
         <div class="ags-content-inner">
 
-            <!-- WELCOME -->
-            <section class="ags-welcome-panel ags-reveal">
+
+            <!-- =================================================
+                 WELCOME
+                 ================================================= -->
+
+            <section
+                class="ags-welcome-panel ags-reveal"
+                aria-labelledby="welcome-heading">
 
                 <div class="ags-welcome-copy">
-                    <span class="ags-content-label">WELCOME</span>
 
-                    <h2>A Place to Call Home</h2>
+                    <span class="ags-content-label">
+                        WELCOME
+                    </span>
+
+                    <h2 id="welcome-heading">
+                        A Place to Call Home
+                    </h2>
 
                     <p>
-                        Our community is built around the idea that a neighborhood
-                        should be more than a collection of houses. Autumn Grove
-                        and Stonebrook provide a place where residents can feel
-                        connected, informed, and proud of where they live.
+                        Our community is built around the idea
+                        that a neighborhood should be more than
+                        a collection of houses. Autumn Grove and
+                        Stonebridge provide a place where
+                        residents can feel connected, informed,
+                        and proud of where they live.
                     </p>
 
                     <p>
-                        The HOA works to help maintain a welcoming, informed,
-                        and thriving community for everyone who calls Autumn Grove
-                        and Stonebrook home.
+                        The HOA works to help maintain a
+                        welcoming, informed, and thriving
+                        community for everyone who calls
+                        Autumn Grove and Stonebridge home.
                     </p>
+
                 </div>
 
+
                 <div class="ags-highlight-box">
-                    <h3>Community Matters</h3>
+
+                    <h3>
+                        Community Matters
+                    </h3>
 
                     <p>
-                        Strong neighborhoods grow when residents stay connected,
-                        participate, communicate, and take pride in their shared
-                        community.
+                        Strong neighborhoods grow when residents
+                        stay connected, participate, communicate,
+                        and take pride in their shared community.
                     </p>
+
                 </div>
 
             </section>
 
 
 
-         
+            <!-- =================================================
+                 IMPORTANT EVENTS
+
+                 EDIT THIS SECTION WHEN EVENTS CHANGE.
+
+                 Each event contains:
+                 1. Event Name
+                 2. Date
+                 3. Time
+                 4. Location
+                 ================================================= -->
+
+            <section
+                class="ags-events-box ags-reveal"
+                aria-labelledby="important-events-title">
+
+                <div class="ags-events-header">
+
+                    <span>
+                        STAY CONNECTED
+                    </span>
+
+                    <h2 id="important-events-title">
+                        Important Events
+                    </h2>
+
+                    <p>
+                        Stay informed about upcoming neighborhood
+                        meetings, activities, and community events.
+                    </p>
+
+                </div>
+
+
+                <div class="ags-events-grid">
+
+
+                    <!-- =========================================
+                         EVENT 1
+                         EDIT INFORMATION BELOW
+                         ========================================= -->
+
+                    <article class="ags-event-card">
+
+                        <h3>
+                            Upcoming Event One
+                        </h3>
+
+                        <div class="ags-event-detail">
+
+                            <strong>
+                                Date:
+                            </strong>
+
+                            September 15, 2026
+
+                        </div>
+
+                        <div class="ags-event-detail">
+
+                            <strong>
+                                Time:
+                            </strong>
+
+                            6:30 PM
+
+                        </div>
+
+                        <div class="ags-event-detail">
+
+                            <strong>
+                                Location:
+                            </strong>
+
+                            Community Meeting Area
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================================
+                         EVENT 2
+                         EDIT INFORMATION BELOW
+                         ========================================= -->
+
+                    <article class="ags-event-card">
+
+                        <h3>
+                            Upcoming Event Two
+                        </h3>
+
+                        <div class="ags-event-detail">
+
+                            <strong>
+                                Date:
+                            </strong>
+
+                            October 10, 2026
+
+                        </div>
+
+                        <div class="ags-event-detail">
+
+                            <strong>
+                                Time:
+                            </strong>
+
+                            10:00 AM
+
+                        </div>
+
+                        <div class="ags-event-detail">
+
+                            <strong>
+                                Location:
+                            </strong>
+
+                            Community Meeting Area
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================================
+                         EVENT 3
+                         EDIT INFORMATION BELOW
+                         ========================================= -->
+
+                    <article class="ags-event-card">
+
+                        <h3>
+                            Upcoming Event Three
+                        </h3>
+
+                        <div class="ags-event-detail">
+
+                            <strong>
+                                Date:
+                            </strong>
+
+                            November 5, 2026
+
+                        </div>
+
+                        <div class="ags-event-detail">
+
+                            <strong>
+                                Time:
+                            </strong>
+
+                            7:00 PM
+
+                        </div>
+
+                        <div class="ags-event-detail">
+
+                            <strong>
+                                Location:
+                            </strong>
+
+                            Community Meeting Area
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
 
         </div>
+
     </main>
 
-    
 
-    <!-- FOOTER -->
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
     <footer class="ags-footer">
+
         <p>
-            Autumn Grove / Stonebrook HOA
+            Autumn Grove / Stonebridge HOA
             <span id="ags-year"></span>
         </p>
 
-        <a href="index.html" class="ags-footer-home">
-            <span>⌂</span>
+        <a
+            href="index.html"
+            class="ags-footer-home">
+
+            <span aria-hidden="true">
+                ⌂
+            </span>
+
             Return to Home
+
         </a>
+
     </footer>
+
 
 </div>
 
+
+
 <script>
+
 /* =========================================================
-   AUTUMN GROVE / STONEBROOK
+   AUTUMN GROVE / STONEBRIDGE HOA
    BASIC JAVASCRIPT
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* Current year */
-    const yearElement = document.getElementById("ags-year");
+
+    /* =====================================================
+       CURRENT YEAR
+       ===================================================== */
+
+    const yearElement =
+        document.getElementById("ags-year");
 
     if (yearElement) {
-        yearElement.textContent = " • " + new Date().getFullYear();
+
+        yearElement.textContent =
+            " • " + new Date().getFullYear();
+
     }
 
-    /* Scroll reveal animation */
-    const revealElements = document.querySelectorAll(".ags-reveal");
 
-    const revealObserver = new IntersectionObserver(
-        function (entries, observer) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.12
-        }
-    );
+    /* =====================================================
+       SCROLL REVEAL ANIMATION
+       ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(".ags-reveal");
+
+
+    /* Respect reduced-motion preference */
+
+    if (
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+
+        revealElements.forEach(function (element) {
+
+            element.classList.add("is-visible");
+
+        });
+
+        return;
+    }
+
+
+    /* Fallback for older browsers */
+
+    if (!("IntersectionObserver" in window)) {
+
+        revealElements.forEach(function (element) {
+
+            element.classList.add("is-visible");
+
+        });
+
+        return;
+    }
+
+
+    const revealObserver =
+        new IntersectionObserver(
+
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "is-visible"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
 
     revealElements.forEach(function (element) {
+
         revealObserver.observe(element);
+
     });
 
+
 });
+
 </script>
 
-</body>
-</html>
